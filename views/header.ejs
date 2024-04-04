@@ -1,0 +1,21 @@
+<header class="row">
+    <nav class="navbar">
+        <div class="col-9">
+            <h1><a href="/" class="nav-brand">Book Notes</a></h1>
+        </div>
+        <div class="col-3 d-flex justify-content-evenly">
+            <% if (locals.isAuthenticated) {%>
+                <a href="/logout" class="btn btn-secondary">Log out</a>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#new">
+                    New
+                </button>
+
+                <% } else {%>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
+                        Login
+                    </button>
+                <%}%>
+        </div>
+    </nav>
+</header>
+<%- include('./login.ejs') %> <%- include('./new.ejs') %>

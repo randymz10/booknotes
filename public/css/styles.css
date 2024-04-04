@@ -1,0 +1,21 @@
+:root {
+    --star-color: #eeab4e;
+}
+.rating-star {
+    color: var(--star-color) ;
+}
+.rating > label {
+    cursor: pointer;
+    font-size: 3rem;
+    transition: 100ms;
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+    color: var(--star-color);   
+}
+
+.rating > input:not(:checked) ~ label:hover,
+.rating > input:not(:checked) ~ label:hover ~ label {
+    color: var(--star-color);
+}
